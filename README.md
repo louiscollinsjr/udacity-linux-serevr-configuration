@@ -31,7 +31,7 @@ You can connect to the AWS instance using the following address and user name:
 
 ### Secure your server.
 
-#### 3. Update al currently installed packages.
+#### 3. Update all currently installed packages.
 
 ![carbon-3](/screenshots/carbon-3.png?raw=true)
 
