@@ -22,5 +22,5 @@ You can connect to the AWS instance using the following address and user name:
 
 #### 3. Update al currently installed packages.
 
-`$ sudo apt-get update`
-`$ sudo apt-get upgrade`
+> $ sudo apt-get update
+> $ sudo apt-get upgrade
