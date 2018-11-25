@@ -1,4 +1,3 @@
-#### Udacity - Linux-ServerConfiguration
 #### udacity-linux-server-configuration
 
 #### 1. Get Amazon Lightsail Server
@@ -20,7 +19,7 @@ You can connect to the AWS instance using the following address and user name:
 
 ### Secure your server.
 
-#### 3. Update al currently installed packages.
+- [x] **3. Update all currently installed packages.**
 
 ```
 $ sudo apt-get update
