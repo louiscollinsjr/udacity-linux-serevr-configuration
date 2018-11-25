@@ -31,13 +31,13 @@ You can connect to the AWS instance using the following address and user name:
 
 ### Secure your server.
 
-####3. Update al currently installed packages.
+#### 3. Update al currently installed packages.
 
 ![carbon-3](/screenshots/carbon-3.png?raw=true)
 
 #### 4. Change the SSH port from **22** to **2200**. 
 
-![carbon-4](/Users/louiscollins/Downloads/carbon-4.png)
+![carbon-4](/screenshots/carbon-4.png?raw=true)
 
 - Change port from 22 to  **2200**
 
@@ -49,7 +49,7 @@ You can connect to the AWS instance using the following address and user name:
 
 Configure the Uncomplicated Firewall (UFW)** to only allow incoming connections for SSH (port 2200), HTTP (port 80), and NTP (port 123).
 
-![carbon-5](/Users/louiscollins/Downloads/carbon-5.png)
+![carbon-5](/screenshots/carbon-5.png?raw=true)
 
 > *Warning:* When changing the SSH port, make sure that the firewall is open for port 2200 first, so that you don't lock yourself out of the server. When you change the SSH port, the Lightsail instance will no longer be accessible through the web app 'Connect using SSH' button. The button assumes the default port is being used. There are instructions on the same page for connecting from your terminal to the instance. Connect using those instructions and then follow the rest of the steps.
 
@@ -65,11 +65,11 @@ In order for your project to be reviewed, the grader needs to be able to log in 
 
 #### 6. Create a new user account named grader.
 
-![carbon-6](/Users/louiscollins/Downloads/carbon-6.png)
+![carbon-6](/screenshots/carbon-6.png?raw=true)
 
-####7. Give grade the permission to sudo.
+#### 7. Give grade the permission to sudo.
 
-![carbon-7](/Users/louiscollins/Downloads/carbon-7.png)
+![carbon-7](/screenshots/carbon-7.png?raw=true)
 
 - Add the following text and save: **grader ALL=(ALL:ALL) ALL**
 
@@ -81,23 +81,23 @@ In order for your project to be reviewed, the grader needs to be able to log in 
 
 On your local device, generate new key pair:
 
-![carbon-8](/Users/louiscollins/Downloads/carbon-8.png)
+![carbon-8](/screenshots/carbon-8.png?raw=true)
 
 View and copy your public key:
 
-![carbon-9](/Users/louiscollins/Downloads/carbon-9.png)
+![carbon-9](/screenshots/carbon-9.png?raw=true)
 
 On the server, 
 
-![carbon-11](/Users/louiscollins/Downloads/carbon-11.png)
+![carbon-11](/screenshots/carbon-11.png?raw=true)
 
 Paste your public key  in authorized_keys and Save.
 
-![carbon-12](/Users/louiscollins/Downloads/carbon-12.png)
+![carbon-12](/screenshots/carbon-12.png?raw=true)
 
 Configure login to block root login and use key authorization
 
-![carbon-13](/Users/louiscollins/Downloads/carbon-13.png)
+![carbon-13](/screenshots/carbon-13.png?raw=true)
 
 - Set **PermitRootLogin** to **no**
 - Set **PasswordAuthenication** to  **no**
@@ -106,7 +106,7 @@ Configure login to block root login and use key authorization
 
 Restart SSH
 
-![carbon-14](/Users/louiscollins/Downloads/carbon-14.png)
+![carbon-14](/screenshots/carbon-14.png?raw=true)
 
 
 
@@ -118,32 +118,32 @@ Restart SSH
 
 #### 9. Configure the local timezone to UTC.
 
-![carbon-15](/Users/louiscollins/Downloads/carbon-15.png)
+![carbon-15](/screenshots/carbon-15.png?raw=true)
 
 #### 10. Install and configure Apache to serve a Python mod_wsgi application.
 
 Install Apache
 
-![carbon-16](/Users/louiscollins/Downloads/carbon-16.png)
+![carbon-16](/screenshots/carbon-16.png?raw=true)
 
 - If you built your project with Python 3, you will need to install the Python 3 mod_wsgi package on your server
 
-![carbon-17](/Users/louiscollins/Downloads/carbon-17.png)
+![carbon-17](/screenshots/carbon-17.png?raw=true)
 
 #### 11.Install and configure PostgreSQL
 
 - Do not allow remote connections
 - Create a new database user named `catalog` that has limited permissions to your catalog application database.
 
-![carbon-19](/Users/louiscollins/Downloads/carbon-19.png)
+![carbon-19](/screenshots/carbon-19.png?raw=true)
 
 #### 12. Install git
 
-![carbon-18](/Users/louiscollins/Downloads/carbon-18.png)
+![carbon-18](/screenshots/carbon-18.png?raw=true)
 
 
 
-###Deploy the Item Catalog Project
+### Deploy the Item Catalog Project
 
 
 
@@ -155,7 +155,7 @@ Set it up in your server so that it functions correctly when visiting your serve
 
 #### 13. Clone Catalog
 
-![carbon-20](/Users/louiscollins/Downloads/carbon-20.png)
+![carbon-20](/screenshots/carbon-20.png?raw=true)
 
 #### 14. Complete server configuration
 
@@ -163,53 +163,53 @@ Set it up in your server so that it functions correctly when visiting your serve
 
 ##### Install virtual environment (/var/www/catalog)
 
-![carbon-21](/Users/louiscollins/Downloads/carbon-21.png)
+![carbon-21](/screenshots/carbon-21.png?raw=true)
 
-#####Install required.txt (/var/www/catalog/catalog)
+##### Install required.txt (/var/www/catalog/catalog)
 
-![carbon-22](/Users/louiscollins/Downloads/carbon-22.png)
+![carbon-22](/screenshots/carbon-22.png?raw=true)
 
-![carbon-23](/Users/louiscollins/Downloads/carbon-23.png)
+![carbon-23](/screenshots/carbon-23.png?raw=true)
 
 
 
 ##### Update all currently installed packages.
 
-![carbon-3](/Users/louiscollins/Downloads/carbon-3.png)
+![carbon-3](/screenshots/carbon-3.png?raw=true)
 
 ##### Create catalog.wsgi
 
-![carbon-27](/Users/louiscollins/Downloads/carbon-27.png)
+![carbon-27](/screenshots/carbon-27.png?raw=true)
 
-![carbon-26](/Users/louiscollins/Downloads/carbon-26.png)
+![carbon-26](/screenshots/carbon-26.png?raw=true)
 
 
 
 ##### Configure and Enable a New Virtual Host
 
-![carbon-25](/Users/louiscollins/Downloads/carbon-25.png)
+![carbon-25](/screenshots/carbon-25.png?raw=true)
 
-![carbon-24](/Users/louiscollins/Downloads/carbon-24.png)
+![carbon-24](/screenshots/carbon-24.png?raw=true)
 
 
 
 ##### Enable the catalog app virtual host site and disable 000-default.conf
 
-![carbon-39](/Users/louiscollins/Downloads/carbon-39.png)
+![carbon-39](/screenshots/carbon-39.png?raw=true)
 
 ##### Rename application-pep8.py to __ init __.py
 
-![carbon-28](/Users/louiscollins/Downloads/carbon-28.png)
+![carbon-28](/screenshots/carbon-28.png?raw=true)
 
 
 
 ##### Update __ init __.py with absolute paths
 
-Change __ init __.py to reflect  absolute paths and enable virtual site.
+Change __ init  __ .py to reflect  absolute paths and enable virtual site.
 
-![carbon-29](/Users/louiscollins/Downloads/carbon-29.png)
+![carbon-29](/screenshots/carbon-29.png?raw=true)
 
-![carbon-30](/Users/louiscollins/Downloads/carbon-30.png)
+![carbon-30](/screenshots/carbon-30.png?raw=true)
 
 - Change `engine = create_engine('sqlite:///category.db')` to `engine = create_engine('postgresql://catalog:catalog@localhost/catalog')`
 - Change `client_secrets.json`  to `/var/www/catalog/catalog/client_secrets.json`
@@ -218,9 +218,9 @@ Change __ init __.py to reflect  absolute paths and enable virtual site.
 
 ##### Monitoring apache logs
 
-![carbon-35](/Users/louiscollins/Downloads/carbon-35.png)
+![carbon-35](/screenshots/carbon-35.png?raw=true)
 
-![carbon-34](/Users/louiscollins/Downloads/carbon-34.png)
+![carbon-34](/screenshots/carbon-34.png?raw=true)
 
 ##### Configure https for facebook login
 
@@ -232,11 +232,11 @@ Cerbot: https://certbot.eff.org/lets-encrypt/ubuntubionic-apache
 
 
 
-Install Certbot
+##### Install Certbot
 
-![carbon-36](/Users/louiscollins/Downloads/carbon-36.png)
+![carbon-36](/screenshots/carbon-36.png?raw=true)
 
-![carbon-37](/Users/louiscollins/Downloads/carbon-37.png)
+![carbon-37](/screenshots/carbon-37.png?raw=true)
 
 
 
