@@ -1,2 +1,2 @@
-##### udacity-linux-serevr-configuration
+#### udacity-linux-serevr-configuration
 Project: Linux Server Configuration
