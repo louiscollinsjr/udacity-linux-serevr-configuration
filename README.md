@@ -243,3 +243,15 @@ Cerbot: https://certbot.eff.org/lets-encrypt/ubuntubionic-apache
 ### Test the web application
 
 Browse to the public ip address of the server and the web application should start up.
+
+```
+- Pulbic IP: 54.145.197.176
+- User name: grader
+- Application URL: https://www.trott.app
+- SSH Connection: ssh -i ~/.ssh/[key file] grader@54.145.197.176 -p 2200
+```
+
+```
+[keyfile] is the full path of the provided key for the grader account.
+```
+
