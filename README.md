@@ -24,9 +24,9 @@ You can connect to the AWS instance using the following address and user name:
 - SSH Connection: ssh -i ~/.ssh/[key file] grader@54.145.197.176 -p 2200
 ```
 
-
-> [keyfile] is the full path of the provided key for the grader account.
-
+```
+[keyfile] is the full path of the provided key for the grader account.
+```
 
 
 ### Secure your server.
