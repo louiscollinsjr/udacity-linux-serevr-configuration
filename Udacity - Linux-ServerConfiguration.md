@@ -33,7 +33,7 @@ You can connect to the AWS instance using the following address and user name:
 
 ####3. Update al currently installed packages.
 
-![carbon-3](/screenshots/carbon-3.png)
+![carbon-3](/screenshots/carbon-3.png?raw=true)
 
 #### 4. Change the SSH port from **22** to **2200**. 
 
